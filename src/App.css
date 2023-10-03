@@ -204,7 +204,7 @@ main.web {
    padding: 10px;
    top: 50%;
    left: 50%;
-   width: 70vw;
+   width: clamp(400px, 70vw, 60rem);
    background: #fff;
    z-index: 99;
    border: solid 1px;
