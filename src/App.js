@@ -1,4 +1,5 @@
 import "./App.css";
+// import { BrowserRouter as Router } from "react-router-dom";
 import { HashRouter as Router } from "react-router-dom";
 import AnimateRoutes from "./components/AnimateRoutes";
 import Modal from "./components/Modal";
@@ -21,7 +22,7 @@ function App() {
       setModalView("");
    };
    return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
          <div className="App">
             <AnimateRoutes openModal={openModal} />
             {modalView && <Modal img={img} title={title} url={url} closeModal={closeModal} />}

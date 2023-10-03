@@ -244,5 +244,11 @@ main.web {
 .modal a:hover {
    color: var(--gold);
 }
-.test {
+.grid img {
+   cursor: pointer;
+   transition: all 300ms;
+}
+
+.grid img:hover {
+   scale: 1.1;
 }
