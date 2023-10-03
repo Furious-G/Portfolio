@@ -169,6 +169,7 @@ nav {
    list-style: none;
    display: flex;
    gap: 25px;
+   padding: 0;
 }
 
 .header nav a.active {
@@ -251,4 +252,29 @@ main.web {
 
 .grid img:hover {
    scale: 1.1;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 480px) {
+   .grid {
+      grid: auto;
+   }
+
+   .innerModal {
+      flex-direction: column;
+   }
+
+   .projectInfo,
+   .projectImg {
+      width: auto;
+   }
+
+   .projectInfo {
+      padding: 20px 0;
+   }
+
+   .header {
+      flex-direction: column;
+      gap: 12px;
+   }
 }
