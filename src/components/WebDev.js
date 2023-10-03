@@ -10,13 +10,13 @@ const WebDev = ({ openModal }) => {
             <div className="content">
                <motion.div
                   className="grid"
-                  initial={{ scale: 0, duration: 6 }}
+                  initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{
                      type: "spring",
-                     delay: 0.4,
-                     scale: 1,
-                     // opacity: { duration: 0.7 },
+                     duration: 1,
+                     delay: 0.5,
+                     opacity: { duration: 0.7 },
                   }}
                   exit={{
                      scale: 0,
