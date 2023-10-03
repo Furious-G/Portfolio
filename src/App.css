@@ -1,38 +1,246 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+   margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+   isolation: isolate;
+}
+
+body,
+html {
+   height: 100%;
+   color: #333;
+   /* background: #cecece; */
+
+   --blue: #0d5b97;
+   --gold: #ae802d;
+}
+
+a {
+   text-decoration: none;
+   color: currentColor;
+   transition: color 400ms;
+}
+
 .App {
-  text-align: center;
+   padding: 0 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+   max-width: 60rem;
+   margin: 0 auto;
+   background: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logoBox {
+   padding-bottom: 80px;
+}
+.logoBox img {
+   width: 300px;
+   margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.home .options {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   gap: 90px;
+   font-family: "felt-tip-woman", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+   font-size: 1.6rem;
+   font-family: "felt-tip-woman", sans-serif;
+}
+
+.home .options a.web:hover {
+   color: var(--gold);
+}
+
+.home .options a.creative:hover {
+   color: var(--blue);
+}
+
+.home .options span {
+   display: block;
+   font-size: 1.8rem;
+   margin-top: 20px;
+}
+
+.home .options img {
+   height: 200px;
+}
+
+.home a .art > div {
+   position: relative;
+   top: -5px;
+}
+
+.home .art img:first-child,
+.home .web img:first-child {
+   position: absolute;
+   transition: all 400ms;
+}
+
+.home .art:hover img:first-child,
+.home .web:hover img:first-child {
+   opacity: 0;
+}
+
+.topBar {
+}
+
+.header {
+   max-width: 60rem;
+   margin: 0 auto;
+   padding: 20px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header .headerLogo img {
+   width: 200px;
+}
+
+.header nav ul {
+   list-style: none;
+   display: flex;
+   gap: 25px;
+}
+
+.header nav a.active {
+   pointer-events: none;
+   color: var(--gold);
+}
+
+main.web {
+   align-items: normal;
+   margin-top: 50px;
+   height: auto;
+}
+
+.grid {
+   display: grid;
+   grid: repeat(3, auto) / repeat(3, auto);
+   width: 100%;
+   gap: 10px;
+}
+
+.grid img {
+   -webkit-box-shadow: 2px 3px 8px 5px rgba(0, 0, 0, 0.1);
+   -moz-box-shadow: 2px 3px 8px 5px rgba(0, 0, 0, 0.1);
+   box-shadow: 2px 3px 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid > div {
+   padding: 10px;
+}
+
+.modal {
+   position: fixed;
+   padding: 10px;
+   top: 50%;
+   left: 50%;
+   width: 70vw;
+   background: #fff;
+   z-index: 99;
+   border: solid 1px;
+   transform: translate(-50%, -50%);
+   font-family: "Roboto", sans-serif;
+}
+
+.backdrop {
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.5);
+}
+.closeM {
+   position: absolute;
+   right: -30px;
+   top: -40px;
+   font-size: 2rem;
+   cursor: pointer;
+}
+
+.innerModal {
+   display: flex;
+}
+.projectImg {
+   width: 70%;
+}
+.projectInfo {
+   width: 30%;
+   padding-left: 20px;
+   background: #fff;
+}
+
+.modal a {
+   color: var(--blue);
+}
+
+.modal a:hover {
+   color: var(--gold);
 }
