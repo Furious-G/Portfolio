@@ -21,7 +21,7 @@ function App() {
       setModalView("");
    };
    return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
          <div className="App">
             <AnimateRoutes openModal={openModal} />
             {modalView && <Modal img={img} title={title} url={url} closeModal={closeModal} />}
