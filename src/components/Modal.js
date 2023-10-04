@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-const Modal = ({ img, title, closeModal, url }) => {
+const Modal = ({ img, title, closeModal, url, type, imgsrc }) => {
    useEffect(() => {}, []);
 
    return (
       <>
          <motion.div
             id="modal"
-            className="modal"
+            className={`modal ${type}`}
             initial={{ opacity: 0, x: "-50%", y: "-100%" }}
             animate={{ opacity: 1, y: "-50%" }}
             transition={{
@@ -29,7 +29,7 @@ const Modal = ({ img, title, closeModal, url }) => {
                </span>
                <div className="projectImg">
                   <img
-                     src={`./images/${img}.jpg`}
+                     src={`./images/${imgsrc}${img}.jpg`}
                      alt="Lamias"
                   />
                </div>

@@ -42,37 +42,47 @@ const Creative = ({ openModal }) => {
                         alt="Kobe"
                         id="kobe"
                         onClick={openModal}
-                        data-url="https://midwestfarmco.com/"
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
                      <img
-                        src="./images/drawings/icecube.png"
+                        src="./images/drawings/icecube.jpg"
                         data-title="Ice Cube"
                         alt="Ice Cube"
+                        id="icecube"
                         onClick={openModal}
                      ></img>
                   </div>
                   <div>
                      <img
-                        src="./images/drawings/basterds.png"
+                        src="./images/drawings/basterds.jpg"
                         data-title="Inglorious Basterds"
                         alt="Basterds"
+                        id="bassterds"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
                      <img
-                        src="./images/drawings/cornell.png"
+                        src="./images/drawings/cornell.jpg"
                         data-title="Chris Cornell"
                         alt="Cornell"
+                        id="cornell"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
 
                   <div>
                      <img
-                        src="./images/drawings/tilman.png"
+                        src="./images/drawings/tilman.jpg"
                         data-title="Pat Tillman"
                         alt="Pat Tillman"
+                        id="tillman"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
@@ -80,6 +90,9 @@ const Creative = ({ openModal }) => {
                         src="./images/drawings/daenerys.jpg"
                         data-title="Daenerys Targaryen"
                         alt="Daenerys Targaryen"
+                        id="daenerys"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
 
@@ -88,6 +101,9 @@ const Creative = ({ openModal }) => {
                         src="./images/drawings/edved.jpg"
                         data-title="Eddie Vedder (Autographed)"
                         alt="Eddie Vedder"
+                        id="edved"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
@@ -95,13 +111,19 @@ const Creative = ({ openModal }) => {
                         src="./images/drawings/layne.jpg"
                         data-title="Layne Staley"
                         alt="Layne Staley"
+                        id="layne"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
                      <img
-                        src="./images/drawings/jules.png"
+                        src="./images/drawings/jules.jpg"
                         data-title="Pulp Fiction"
                         alt="Jules"
+                        id="jules"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
@@ -109,19 +131,28 @@ const Creative = ({ openModal }) => {
                         src="./images/drawings/hq.jpg"
                         data-title="Harley Quinn"
                         alt="Harley"
+                        id="hq"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
                      <img
-                        src="./images/drawings/ww.png"
+                        src="./images/drawings/ww.jpg"
                         data-title="Walter White"
                         alt="Walter"
+                        id="ww"
+                        onClick={openModal}
+                        data-type="img"
                      ></img>
                   </div>
                   <div>
                      <img
                         src="./images/drawings/ez.jpg"
                         data-title="Eazy E"
+                        id="ez"
+                        onClick={openModal}
+                        data-type="img"
                         alt="Eazy"
                      ></img>
                   </div>

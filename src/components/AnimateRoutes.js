@@ -10,10 +10,22 @@ const AnimateRoutes = ({ openModal }) => {
 
    return (
       <AnimatePresence mode="wait">
-         <Routes location={location} key={location.key}>
-            <Route path="/" element={<Home />} />
-            <Route path="/webdevelopment" element={<WebDev openModal={openModal} />} />
-            <Route path="/creative" element={<Creative />} />
+         <Routes
+            location={location}
+            key={location.key}
+         >
+            <Route
+               path="/"
+               element={<Home />}
+            />
+            <Route
+               path="/webdevelopment"
+               element={<WebDev openModal={openModal} />}
+            />
+            <Route
+               path="/creative"
+               element={<Creative openModal={openModal} />}
+            />
          </Routes>
       </AnimatePresence>
    );
