@@ -282,6 +282,7 @@ main.creative {
    margin-bottom: 10px;
 }
 
+/* fix */
 .my-masonry-grid_column > div img {
    margin: 0 auto;
 }
