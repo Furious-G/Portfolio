@@ -12,8 +12,8 @@ let imgsrc = "";
 function App() {
    const [modalView, setModalView] = useState("");
    const openModal = e => {
-      if (e.target.dataset.type) {
-         type = e.target.dataset.type;
+      if (e.target.dataset.type === "img") {
+         type = "img";
          imgsrc = "drawings/";
       }
       img = e.target.id;
