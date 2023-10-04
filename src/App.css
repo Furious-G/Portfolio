@@ -176,6 +176,10 @@ nav {
    pointer-events: none;
    color: var(--gold);
 }
+.header nav a.active.creative {
+   pointer-events: none;
+   color: var(--blue);
+}
 
 main.web {
    align-items: normal;
