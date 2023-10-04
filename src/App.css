@@ -275,6 +275,10 @@ main.creative {
    scale: 1.1;
 }
 
+a.visit {
+   display: none;
+}
+
 /* masonary */
 
 .my-masonry-grid {

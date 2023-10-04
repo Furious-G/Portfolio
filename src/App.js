@@ -9,12 +9,16 @@ let title;
 let url;
 let type = "";
 let imgsrc = "";
+let visitclass = "";
 function App() {
    const [modalView, setModalView] = useState("");
    const openModal = e => {
       if (e.target.dataset.type === "img") {
          type = "img";
          imgsrc = "drawings/";
+      }
+      if (e.target.dataset.url === "") {
+         visitclass = "visit";
       }
       img = e.target.id;
       title = e.target.dataset.title;
@@ -39,6 +43,7 @@ function App() {
                   closeModal={closeModal}
                   type={type}
                   imgsrc={imgsrc}
+                  visitclass={visitclass}
                />
             )}
          </div>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-const Modal = ({ img, title, closeModal, url, type, imgsrc }) => {
+const Modal = ({ img, title, closeModal, url, type, imgsrc, visitclass }) => {
    useEffect(() => {}, []);
 
    return (
@@ -37,6 +37,7 @@ const Modal = ({ img, title, closeModal, url, type, imgsrc }) => {
                   Client:
                   <h3>{title}</h3>
                   <a
+                     className={`${visitclass}`}
                      href={url}
                      target="_blank"
                      rel="noreferrer"
