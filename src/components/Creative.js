@@ -154,6 +154,7 @@ const Creative = ({ openModal }) => {
                         onClick={openModal}
                         data-type="img"
                         alt="Eazy"
+                        className="fade"
                      ></img>
                   </div>
                </Masonry>
