@@ -370,4 +370,7 @@ main.creative {
       flex-direction: column;
       gap: 12px;
    }
+   .my-masonry-grid_column > div img {
+      pointer-events: none;
+   }
 }
