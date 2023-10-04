@@ -22,7 +22,10 @@ const Home = () => {
                      transition: { duration: 0.5 },
                   }}
                >
-                  <img src="./images/lamias-logo.png" alt="Lamias" />
+                  <img
+                     src="./images/lamias-logo.png"
+                     alt="Lamias"
+                  />
                </motion.div>
                <motion.div
                   className="options"
@@ -39,20 +42,38 @@ const Home = () => {
                      transition: { delay: 0.3, duration: 0.5 },
                   }}
                >
-                  <Link to="/webdevelopment" className="web">
+                  <Link
+                     to="/webdevelopment"
+                     className="web"
+                  >
                      <div className="web">
                         <div>
-                           <img src="./images/cpu-icon.png" alt="Web" />
-                           <img src="./images/cpu-icon-hover.png" alt="Web" />
+                           <img
+                              src="./images/cpu-icon.png"
+                              alt="Web"
+                           />
+                           <img
+                              src="./images/cpu-icon-hover.png"
+                              alt="Web"
+                           />
                         </div>
                         <span className="link">Web Development</span>
                      </div>
                   </Link>
-                  <Link to="/creative" className="creative">
+                  <Link
+                     to="/creative"
+                     className="creative"
+                  >
                      <div className="art">
                         <div>
-                           <img src="./images/art-icon.png" alt="Art" />
-                           <img src="./images/art-icon-hover.png" alt="Art" />
+                           <img
+                              src="./images/art-icon.png"
+                              alt="Art"
+                           />
+                           <img
+                              src="./images/art-icon-hover.png"
+                              alt="Art"
+                           />
                         </div>
                         <span className="link">Art/Creatove</span>
                      </div>

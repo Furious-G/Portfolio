@@ -21,23 +21,35 @@ const Modal = ({ img, title, closeModal, url }) => {
             }}
          >
             <div className="innerModal">
-               <span className="closeM" onClick={closeModal}>
+               <span
+                  className="closeM"
+                  onClick={closeModal}
+               >
                   &#10006;
                </span>
                <div className="projectImg">
-                  <img src={`./images/${img}.jpg`} alt="Lamias" />
+                  <img
+                     src={`./images/${img}.jpg`}
+                     alt="Lamias"
+                  />
                </div>
                <div className="projectInfo">
                   Client:
                   <h3>{title}</h3>
-                  <br />
-                  <a href={url} target="_blank" rel="noreferrer">
+                  <a
+                     href={url}
+                     target="_blank"
+                     rel="noreferrer"
+                  >
                      Visit Site
                   </a>
                </div>
             </div>
          </motion.div>
-         <div className="backdrop" onClick={closeModal}></div>
+         <div
+            className="backdrop"
+            onClick={closeModal}
+         ></div>
       </>
    );
 };

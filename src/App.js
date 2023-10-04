@@ -25,7 +25,14 @@ function App() {
       <Router>
          <div className="App">
             <AnimateRoutes openModal={openModal} />
-            {modalView && <Modal img={img} title={title} url={url} closeModal={closeModal} />}
+            {modalView && (
+               <Modal
+                  img={img}
+                  title={title}
+                  url={url}
+                  closeModal={closeModal}
+               />
+            )}
          </div>
       </Router>
    );
