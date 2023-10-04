@@ -110,7 +110,7 @@ const WebDev = ({ openModal }) => {
                         onClick={openModal}
                         id="5-0"
                         data-title="5-0 Productions"
-                        // data-url="https://precision-locating.com"
+                        data-url=""
                      />
                   </div>
                </motion.div>

@@ -9,20 +9,27 @@ let title;
 let url;
 let type = "";
 let imgsrc = "";
-let visitclass = "";
+let visitclass;
 function App() {
    const [modalView, setModalView] = useState("");
+
    const openModal = e => {
+      //change modal size depending on image
       if (e.target.dataset.type === "img") {
          type = "img";
          imgsrc = "drawings/";
       }
-      if (e.target.dataset.url === "") {
-         visitclass = "visit";
-      }
       img = e.target.id;
       title = e.target.dataset.title;
       url = e.target.dataset.url;
+
+      //if no url then add a class to hide link
+      if (!url) {
+         visitclass = "visit";
+      } else {
+         visitclass = "";
+      }
+
       setModalView(img);
       const modal = document.getElementById("modal");
       console.log(modal);
