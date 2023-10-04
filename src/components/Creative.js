@@ -80,7 +80,7 @@ const Creative = ({ openModal }) => {
                         src="./images/drawings/tilman.jpg"
                         data-title="Pat Tillman"
                         alt="Pat Tillman"
-                        id="tillman"
+                        id="tilman"
                         onClick={openModal}
                         data-type="img"
                      ></img>
