@@ -42,6 +42,7 @@ function App() {
       imgsrc = "";
       visitclass = "";
    };
+
    return (
       <Router>
          <div className="App">

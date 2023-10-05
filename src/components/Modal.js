@@ -10,6 +10,7 @@ const Modal = ({ img, title, closeModal, url, type, imgsrc, visitclass }) => {
             animate={{ opacity: 1, y: "-50%" }}
             transition={{
                type: "spring",
+               delay: 0.2,
                // opacity: { duration: 0.7 },
             }}
             exit={{
@@ -44,10 +45,13 @@ const Modal = ({ img, title, closeModal, url, type, imgsrc, visitclass }) => {
                </div>
             </div>
          </motion.div>
-         <div
+         <motion.div
+            initial={{ opacity: 1, bottom: "50%", top: "50%" }}
+            animate={{ opacity: 1, bottom: "0%", top: "0%" }}
+            transition={{ duration: 0.2 }}
             className="backdrop"
             onClick={closeModal}
-         ></div>
+         ></motion.div>
       </>
    );
 };
