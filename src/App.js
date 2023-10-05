@@ -15,11 +15,10 @@ function App() {
 
    const openModal = e => {
       //change modal size depending on image
+
       if (e.target.dataset.type === "img") {
          type = "img";
          imgsrc = "drawings/";
-      } else {
-         type = "web";
       }
       img = e.target.id;
       title = e.target.dataset.title;
@@ -39,6 +38,8 @@ function App() {
 
    const closeModal = () => {
       setModalView("");
+      type = "";
+      imgsrc = "";
    };
    return (
       <Router>
