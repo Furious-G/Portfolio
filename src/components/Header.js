@@ -13,6 +13,7 @@ const Header = ({ location }) => {
                transition={{
                   type: "spring",
                   duration: 1,
+                  delay: 0.5,
                   // x: 0,
                   // opacity: { duration: 0.7 },
                }}
@@ -49,6 +50,7 @@ const Header = ({ location }) => {
                transition={{
                   type: "spring",
                   duration: 0.5,
+                  delay: 0.5,
                   // x: 0,
                   // opacity: { duration: 0.7 },
                }}
