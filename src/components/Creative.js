@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+// import { useEffect } from "react";
 import Masonry from "react-masonry-css";
 import Header from "./Header";
 
@@ -10,6 +11,11 @@ const Creative = ({ openModal }) => {
       700: 2,
       500: 1,
    };
+
+   // useEffect(() => {
+   //    type = "img";
+   //    imgsrc = "drawings/";
+   // }, []);
 
    return (
       <>
@@ -51,6 +57,7 @@ const Creative = ({ openModal }) => {
                         data-tooltip="Ice Cube"
                         alt="Ice Cube"
                         id="icecube"
+                        data-type="img"
                         onClick={openModal}
                      ></img>
                   </div>

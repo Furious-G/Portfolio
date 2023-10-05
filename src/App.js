@@ -40,6 +40,7 @@ function App() {
       setModalView("");
       type = "";
       imgsrc = "";
+      visitclass = "";
    };
    return (
       <Router>

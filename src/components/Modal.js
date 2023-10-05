@@ -1,9 +1,6 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Modal = ({ img, title, closeModal, url, type, imgsrc, visitclass }) => {
-   useEffect(() => {}, []);
-
    return (
       <>
          <motion.div
