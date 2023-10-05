@@ -78,7 +78,12 @@ a {
 }
 
 .App {
-   padding: 0 30px;
+   padding: 0 20px;
+   position: relative;
+}
+
+.container {
+   padding-top: 100px;
 }
 
 .content {
@@ -149,9 +154,6 @@ nav {
    opacity: 0;
 }
 
-.topBar {
-}
-
 .header {
    max-width: 60rem;
    margin: 0 auto;
@@ -183,13 +185,19 @@ nav {
 
 main.web {
    align-items: normal;
-   margin-top: 30px;
    height: auto;
 }
 
 main.creative {
-   margin-top: 30px;
    display: block;
+}
+
+.topBar {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   left: 0;
+   padding: 0 20px;
 }
 
 .grid {
@@ -278,7 +286,20 @@ main.creative {
 a.visit {
    display: none;
 }
+.web.underline {
+   height: 1px;
+   background: var(--gold);
+}
 
+.underline {
+   height: 1px;
+   background: #333;
+}
+
+.creative.underline {
+   height: 1px;
+   background: var(--blue);
+}
 /* masonary */
 
 .my-masonry-grid {
@@ -364,6 +385,10 @@ a.visit {
    .projectInfo,
    .projectImg {
       width: auto;
+   }
+
+   .container {
+      padding-top: 140px !important;
    }
 
    .projectInfo {

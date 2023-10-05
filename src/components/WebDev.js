@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "./Header";
 
 const WebDev = ({ openModal }) => {
    return (
-      <>
-         <Header />
+      <div className="container">
          <main className="web">
             <div className="content">
                <motion.div
@@ -15,7 +13,7 @@ const WebDev = ({ openModal }) => {
                   transition={{
                      type: "spring",
                      duration: 1,
-                     delay: 0.5,
+
                      opacity: { duration: 0.7 },
                   }}
                   exit={{
@@ -116,7 +114,7 @@ const WebDev = ({ openModal }) => {
                </motion.div>
             </div>
          </main>
-      </>
+      </div>
    );
 };
 

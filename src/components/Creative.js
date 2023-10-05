@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 // import { useEffect } from "react";
 import Masonry from "react-masonry-css";
-import Header from "./Header";
 
 const Creative = ({ openModal }) => {
    const breakpointColumnsObj = {
@@ -18,8 +17,7 @@ const Creative = ({ openModal }) => {
    // }, []);
 
    return (
-      <>
-         <Header />
+      <div className="container">
          <main className="creative">
             <motion.div
                className="content"
@@ -28,7 +26,7 @@ const Creative = ({ openModal }) => {
                transition={{
                   type: "spring",
                   duration: 1,
-                  delay: 0.5,
+
                   opacity: { duration: 0.7 },
                }}
                exit={{
@@ -167,7 +165,7 @@ const Creative = ({ openModal }) => {
                </Masonry>
             </motion.div>
          </main>
-      </>
+      </div>
    );
 };
 

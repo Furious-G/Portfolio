@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Header = () => {
+const Header = ({ location }) => {
+   console.log(location);
    return (
       <div className="topBar">
          <div className="header">
@@ -36,7 +37,10 @@ const Header = () => {
                      transition: { duration: 1 },
                   }}
                >
-                  <img src="./images/lamias-logo.png" alt="Lamias" />
+                  <img
+                     src="./images/lamias-logo.png"
+                     alt="Lamias"
+                  />
                </NavLink>
             </motion.div>
             <motion.nav
@@ -56,14 +60,32 @@ const Header = () => {
             >
                <ul>
                   <li>
-                     <NavLink to="/webdevelopment" className="web">
+                     <NavLink
+                        to="/webdevelopment"
+                        className="web"
+                     >
                         Web Development
                      </NavLink>
+                     {location === "/webdevelopment" && (
+                        <motion.div
+                           className="underline web"
+                           layoutId="underline"
+                        />
+                     )}
                   </li>
                   <li>
-                     <NavLink to="/creative" className="creative">
+                     <NavLink
+                        to="/creative"
+                        className="creative"
+                     >
                         Creative
                      </NavLink>
+                     {location === "/creative" && (
+                        <motion.div
+                           className="underline creative"
+                           layoutId="underline"
+                        />
+                     )}
                   </li>
                </ul>
             </motion.nav>
