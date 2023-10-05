@@ -18,6 +18,8 @@ function App() {
       if (e.target.dataset.type === "img") {
          type = "img";
          imgsrc = "drawings/";
+      } else {
+         type = "web";
       }
       img = e.target.id;
       title = e.target.dataset.title;
