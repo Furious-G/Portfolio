@@ -21,8 +21,8 @@ const Creative = ({ openModal }) => {
          <main className="creative">
             <motion.div
                className="content"
-               initial={{ scale: 0 }}
-               animate={{ scale: 1 }}
+               initial={{ opacity: 0, y: "100%" }}
+               animate={{ opacity: 1, y: 0 }}
                transition={{
                   type: "spring",
                   duration: 1,
@@ -30,7 +30,8 @@ const Creative = ({ openModal }) => {
                   opacity: { duration: 0.7 },
                }}
                exit={{
-                  scale: 0,
+                  y: "100%",
+                  opacity: 0,
                   transition: { duration: 0.5 },
                }}
             >

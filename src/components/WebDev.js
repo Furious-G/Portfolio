@@ -3,13 +3,16 @@ import { motion } from "framer-motion";
 
 const WebDev = ({ openModal }) => {
    return (
-      <div className="container">
+      <div
+         className="container"
+         layoutId="test"
+      >
          <main className="web">
             <div className="content">
                <motion.div
                   className="grid"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
+                  initial={{ opacity: 0, y: "100%" }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
                      type: "spring",
                      duration: 1,
@@ -17,7 +20,8 @@ const WebDev = ({ openModal }) => {
                      opacity: { duration: 0.7 },
                   }}
                   exit={{
-                     scale: 0,
+                     y: "100%",
+                     opacity: 0,
                      transition: { duration: 0.5 },
                   }}
                >
