@@ -2,6 +2,7 @@ import "./App.css";
 // import { BrowserRouter as Router } from "react-router-dom";
 import { HashRouter as Router } from "react-router-dom";
 import AnimateRoutes from "./components/AnimateRoutes";
+import { AnimatePresence } from "framer-motion";
 import Modal from "./components/Modal";
 import { useState } from "react";
 let img;
@@ -47,17 +48,19 @@ function App() {
       <Router>
          <div className="App">
             <AnimateRoutes openModal={openModal} />
-            {modalView && (
-               <Modal
-                  img={img}
-                  title={title}
-                  url={url}
-                  closeModal={closeModal}
-                  type={type}
-                  imgsrc={imgsrc}
-                  visitclass={visitclass}
-               />
-            )}
+            <AnimatePresence mode="wait">
+               {modalView && (
+                  <Modal
+                     img={img}
+                     title={title}
+                     url={url}
+                     closeModal={closeModal}
+                     type={type}
+                     imgsrc={imgsrc}
+                     visitclass={visitclass}
+                  />
+               )}
+            </AnimatePresence>
          </div>
       </Router>
    );

@@ -14,7 +14,8 @@ const Modal = ({ img, title, closeModal, url, type, imgsrc, visitclass }) => {
                // opacity: { duration: 0.7 },
             }}
             exit={{
-               scale: 0,
+               y: "100%",
+               opacity: "0",
                transition: { duration: 0.5 },
             }}
          >
@@ -49,6 +50,10 @@ const Modal = ({ img, title, closeModal, url, type, imgsrc, visitclass }) => {
             initial={{ opacity: 1, bottom: "50%", top: "50%" }}
             animate={{ opacity: 1, bottom: "0%", top: "0%" }}
             transition={{ duration: 0.2 }}
+            exit={{
+               opacity: 0,
+               transition: { delay: 0.2 },
+            }}
             className="backdrop"
             onClick={closeModal}
          ></motion.div>

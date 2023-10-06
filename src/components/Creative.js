@@ -26,9 +26,8 @@ const Creative = ({ openModal }) => {
                animate={{ opacity: 1, y: 0 }}
                transition={{
                   type: "spring",
-                  bounce: 0.35,
+                  bounce: 0.34,
                   duration: 1,
-
                   opacity: { duration: 0.7 },
                }}
                exit={{

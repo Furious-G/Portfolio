@@ -16,7 +16,7 @@ const WebDev = ({ openModal }) => {
                   transition={{
                      type: "spring",
                      bounce: 0.4,
-
+                     duration: 1,
                      opacity: { duration: 0.7 },
                   }}
                   exit={{
