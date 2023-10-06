@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 // import { useEffect } from "react";
 import Masonry from "react-masonry-css";
 
@@ -11,10 +11,11 @@ const Creative = ({ openModal }) => {
       500: 1,
    };
 
-   // useEffect(() => {
-   //    type = "img";
-   //    imgsrc = "drawings/";
-   // }, []);
+   const variant = {
+      initial: { opacity: 0, y: "100%" },
+      enter: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring", stiffness: 30, damping: 7, ease: "easeInOut" } },
+      exit: { y: "100%", opacity: 0, transition: { duration: 0.8 } },
+   };
 
    return (
       <div className="container">
@@ -25,6 +26,8 @@ const Creative = ({ openModal }) => {
                animate={{ opacity: 1, y: 0 }}
                transition={{
                   type: "spring",
+                  stiffness: 90,
+                  damping: 12,
                   duration: 1,
 
                   opacity: { duration: 0.7 },

@@ -15,6 +15,7 @@ const WebDev = ({ openModal }) => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
                      type: "spring",
+                     damping: 12,
                      duration: 1,
 
                      opacity: { duration: 0.7 },
