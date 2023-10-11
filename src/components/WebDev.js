@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 
 const WebDev = ({ openModal }) => {
    return (
-      <div
-         className="container"
-         layoutId="test"
-      >
+      <div className="container">
          <main className="web">
             <div className="content">
                <motion.div

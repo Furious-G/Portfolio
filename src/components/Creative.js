@@ -1,5 +1,6 @@
 import React from "react";
 import { easeInOut, motion } from "framer-motion";
+import { drawings } from "./drawings";
 // import { useEffect } from "react";
 import Masonry from "react-masonry-css";
 
@@ -41,129 +42,17 @@ const Creative = ({ openModal }) => {
                   className="my-masonry-grid"
                   columnClassName="my-masonry-grid_column"
                >
-                  <div>
-                     <img
-                        src="./images/drawings/kobe.jpg"
-                        data-tooltip="Kobe Bryant"
-                        alt="Kobe"
-                        id="kobe"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/icecube.jpg"
-                        data-tooltip="Ice Cube"
-                        alt="Ice Cube"
-                        id="icecube"
-                        data-type="img"
-                        onClick={openModal}
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/basterds.jpg"
-                        data-tooltip="Inglorious Basterds"
-                        alt="Basterds"
-                        id="basterds"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/cornell.jpg"
-                        data-tooltip="Chris Cornell"
-                        alt="Cornell"
-                        id="cornell"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-
-                  <div>
-                     <img
-                        src="./images/drawings/tilman.jpg"
-                        data-tooltip="Pat Tillman"
-                        alt="Pat Tillman"
-                        id="tilman"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/daenerys.jpg"
-                        data-tooltipe="Daenerys Targaryen"
-                        alt="Daenerys Targaryen"
-                        id="daenerys"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-
-                  <div>
-                     <img
-                        src="./images/drawings/edved.jpg"
-                        data-tooltip="Eddie Vedder (Autographed)"
-                        alt="Eddie Vedder"
-                        id="edved"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/layne.jpg"
-                        data-tooltip="Layne Staley"
-                        alt="Layne Staley"
-                        id="layne"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/jules.jpg"
-                        data-tooltip="Pulp Fiction"
-                        alt="Jules"
-                        id="jules"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/hq.jpg"
-                        data-tooltip="Harley Quinn"
-                        alt="Harley"
-                        id="hq"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/ww.jpg"
-                        data-tooltip="Walter White"
-                        alt="Walter"
-                        id="ww"
-                        onClick={openModal}
-                        data-type="img"
-                     ></img>
-                  </div>
-                  <div>
-                     <img
-                        src="./images/drawings/ez.jpg"
-                        data-tooltip="Eazy E"
-                        id="ez"
-                        onClick={openModal}
-                        data-type="img"
-                        alt="Eazy"
-                        className="fade"
-                     ></img>
-                  </div>
+                  {drawings.map(item => (
+                     <div key={item.id}>
+                        <img
+                           src={item.src}
+                           alt={item.name}
+                           id={item.id}
+                           onClick={openModal}
+                           data-type="img"
+                        />
+                     </div>
+                  ))}
                </Masonry>
             </motion.div>
          </main>
