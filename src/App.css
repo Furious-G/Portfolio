@@ -383,6 +383,16 @@ a.visit {
       grid: inherit;
    }
 
+   .home .options {
+      gap: 30px;
+      flex-direction: column;
+   }
+
+   .home .options a {
+      display: flex;
+      justify-content: center;
+   }
+
    .innerModal {
       flex-direction: column;
    }
