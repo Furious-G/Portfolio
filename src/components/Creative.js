@@ -1,10 +1,13 @@
 import React from "react";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { drawings } from "./drawings";
 // import { useEffect } from "react";
 import Masonry from "react-masonry-css";
 
 const Creative = ({ openModal }) => {
+   // let pics = drawings.length;
+   // let [imagesLoaded, setImagesLoaded] = useState(0);
+
    const breakpointColumnsObj = {
       default: 4,
       1100: 3,
@@ -12,15 +15,14 @@ const Creative = ({ openModal }) => {
       500: 1,
    };
 
-   const variant = {
-      initial: { opacity: 0, y: "100%" },
-      enter: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring", stiffness: 30, damping: 7, ease: "easeInOut" } },
-      exit: { y: "100%", opacity: 0, transition: { duration: 0.8 } },
+   const imgLoad = () => {
+      console.log("loaded");
    };
 
    return (
       <div className="container">
          <main className="creative">
+            {/* {imagesLoaded === pics && <div>testing</div>} */}
             <motion.div
                className="content"
                initial={{ opacity: 0, y: "100%" }}
@@ -49,6 +51,7 @@ const Creative = ({ openModal }) => {
                            alt={item.name}
                            id={item.id}
                            onClick={openModal}
+                           onLoad={imgLoad}
                            data-type="img"
                         />
                      </div>
