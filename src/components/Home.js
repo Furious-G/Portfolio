@@ -75,7 +75,7 @@ const Home = () => {
                               alt="Art"
                            />
                         </div>
-                        <span className="link">Art/Creatove</span>
+                        <span className="link">Art/Creative</span>
                      </div>
                   </Link>
                </motion.div>
